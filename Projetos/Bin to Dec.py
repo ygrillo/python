@@ -21,4 +21,17 @@ def bintodec(bin: str):
     return sum(lista_dec)
     
 
-print(bintodec(1111))
+def dec_to_bin(dec: int):
+    lista = []
+    while dec // 2 > 1:
+        lista.append(dec % 2)
+        dec = dec // 2
+    if dec % 2 == 1:
+        prefix = 11
+    else:
+        prefix = 10
+
+    print(str(prefix) + ''.join([str(x) for x in lista[::-1]]))
+
+
+dec_to_bin(23)
