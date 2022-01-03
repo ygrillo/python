@@ -1,36 +1,24 @@
-def bintodec(bin):
+def bintodec(bin: str):
+    
+    bin_dec = str(bin)
 
-    lista_bin = []
+    # populo a lista
+    lista = [x for x in bin_dec]
 
-    binstr = str(bin)
+    # inverto a ordem
+    lista = lista[::-1]
 
-    n = 0
+    # para inteiro
+    lista = [int(x) for x in lista]
 
-    while n < len(binstr):
-        lista_bin.append(binstr[n])
-        n += 1
+    lista_dec = []
 
-    o = 1
-    p = 0
-    rf = 0
+    for x in range(len(lista)):
+        y = lista[x] * (2 ** x)
+        lista_dec.append(y)
+    
+    # faço a soma
+    return sum(lista_dec)
+    
 
-    while o <= len(binstr):
-        x = int(lista_bin[len(lista_bin) - o])  # último caracter da lista
-        r = int(x * (2 ** p))
-        o += 1
-        p += 1
-        rf = r + rf
-
-    return rf
-
-print(bintodec(1010))
-
-'''
-lista_nome = []
-
-nome = input('Nome: ')
-for letras in nome:
-    if letras not in ' ':
-        lista_nome.append(letras)
-print(len(lista_nome))
-'''
+print(bintodec(1111))
