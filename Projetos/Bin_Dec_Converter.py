@@ -34,4 +34,4 @@ def dec_to_bin(dec: int):
     print(str(prefix) + ''.join([str(x) for x in lista[::-1]]))
 
 
-dec_to_bin(123)
+dec_to_bin(22)
