@@ -2,14 +2,8 @@ def bin_to_dec(bin: str):
     
     bin_dec = str(bin)
 
-    # populo a lista
-    lista = [x for x in bin_dec]
-
-    # inverto a ordem
-    lista = lista[::-1]
-
-    # para inteiro
-    lista = [int(x) for x in lista]
+    # populo a lista, transformo em inteiro e inverto a ordem
+    lista = [int(x) for x in bin_dec][::-1]
 
     lista_dec = []
 
@@ -33,5 +27,3 @@ def dec_to_bin(dec: int):
 
     print(str(prefix) + ''.join([str(x) for x in lista[::-1]]))
 
-
-dec_to_bin(22)
