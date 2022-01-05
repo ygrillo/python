@@ -1,8 +1,10 @@
 # Repositório de Projetos Python
  Todos os projetos aprendidos e desenvolvidos estarão aqui.
+## How to reach me:
 
-- 👋 Hi, I’m @ygrillo (Yuri Grillo)
-- 👀 I’m interested in ...Python codes
-- 🌱 I’m currently learning ...Python, MySQL, Git and GitHub
-- 💞️ I’m looking to collaborate on ...Python projects
-- 📫 How to reach me ...Telegram(@ygrillo)
+```
+letters = ['l', 'o', 'y', 'g', 'i', 'r', '@']
+numbers = [-1, 2, 3, -2, -3, 0, 0, 1]
+
+print(''.join([letters[x] for x in numbers]))
+```
