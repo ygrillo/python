@@ -26,4 +26,3 @@ def dec_to_bin(dec: int):
         prefix = 10
 
     print(str(prefix) + ''.join([str(x) for x in lista[::-1]]))
-
