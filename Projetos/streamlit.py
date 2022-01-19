@@ -64,11 +64,9 @@ def load_data(nrows):
 # Create a text element and let the reader know the data is loading.
 data_load_state = st.text('Loading data...')
 # Load 10,000 rows of data into the dataframe.
-data = pd.read_sql_query('SELECT * FROM dim.Produto', cnxn)
-lowercase_sql = lambda x: str(x).lower()
-data.rename(lowercase_sql, axis=1, inplace=True)
+data = load_data(10000)
 # Notify the reader that the data was successfully loaded.
-data_load_state.text("Done! (using st.cache)")
+data_load_state.text('Loading data...done!')
 
 st.subheader('Raw data')
 st.write(data)
